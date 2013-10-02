@@ -50,7 +50,7 @@
     var howl = new Howl(
       {
         onload: callback,
-        urls: ['/sounds/halo4.appended.mp3'],
+        urls: ['sounds/halo4.appended.mp3'],
         sprite: {
           assaultrifle: [0, 3857],
           battlerifle: [3857, 2142],
@@ -94,7 +94,7 @@
     var howl = new Howl(
       {
         onload: callback,
-        urls: ['/sounds/halo3.appended.mp3'],
+        urls: ['sounds/halo3.appended.mp3'],
         sprite: {
           assaultrifle: [0, 2571],
           battlerifle: [2571, 2142],
@@ -128,7 +128,7 @@
     var howl = new Howl(
       {
         onload: callback,
-        urls: ['/sounds/haloreach.appended.mp3'],
+        urls: ['sounds/haloreach.appended.mp3'],
         sprite: {
           assaultrifle: [0, 3428],
           concussionrifle: [3428, 2142],
@@ -164,7 +164,7 @@
     var howl = new Howl(
       {
         onload: callback,
-        urls: ['/sounds/halo2.appended.mp3'],
+        urls: ['sounds/halo2.appended.mp3'],
         sprite: {
           battlerifle: [0, 1714],
           bruteshot: [1714, 2571],
@@ -192,7 +192,7 @@
     var howl = new Howl(
       {
         onload: callback,
-        urls: ['/sounds/haloce.appended.mp3'],
+        urls: ['sounds/haloce.appended.mp3'],
         sprite: {
           assaultrifle: [0, 2571],
           fraggrenade: [2571, 4285],
