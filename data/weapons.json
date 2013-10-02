@@ -1,0 +1,128 @@
+{
+	"weapons": [
+		{
+			"name": "Assault Rifle",
+			"sounds": [
+				{
+					"title": "Halo: CE",
+					"path": "a.wav"
+				}, 
+				{
+					"title": "Halo 2",
+					"path": "b.wav"
+				}, 
+				{
+					"title": "Halo 3",
+					"path": "b.wav"
+				}, 
+				{
+					"title": "Halo ODST",
+					"path": "b.wav"
+				}, 
+				{
+					"title": "Halo: CE Anniversary",
+					"path": "b.wav"
+				}, 
+				{
+					"title": "Halo Reach",
+					"path": "b.wav"
+				}, 
+				{
+					"title": "Halo 4",
+					"path": "b.wav"
+				}
+			]
+		}, 
+		{
+			"name": "Plasma Pistol",
+			"sounds": [
+				{
+					"title": "Halo: CE",
+					"path": "a.wav"
+				}, 
+				{
+					"title": "Halo 4",
+					"path": "b.wav"
+				}
+			]
+		}, 
+		{
+			"name": "Battle Rifle",
+			"sounds": [
+				{
+					"title": "Halo: CE",
+					"path": "a.wav"
+				}, 
+				{
+					"title": "Halo 4",
+					"path": "b.wav"
+				}
+			]
+		}, 
+		{
+			"name": "Rocket Launcher",
+			"sounds": [
+				{
+					"title": "Halo: CE",
+					"path": "a.wav"
+				}, 
+				{
+					"title": "Halo 4",
+					"path": "b.wav"
+				}
+			]
+		}, 
+		{
+			"name": "Needler",
+			"sounds": [
+				{
+					"title": "Halo: CE",
+					"path": "a.wav"
+				}, 
+				{
+					"title": "Halo 4",
+					"path": "b.wav"
+				}
+			]
+		}, 
+		{
+			"name": "Plasma Rifle",
+			"sounds": [
+				{
+					"title": "Halo: CE",
+					"path": "a.wav"
+				}, 
+				{
+					"title": "Halo 4",
+					"path": "b.wav"
+				}
+			]
+		}, 
+		{
+			"name": "Light Rifle",
+			"sounds": [
+				{
+					"title": "Halo: CE",
+					"path": "a.wav"
+				}, 
+				{
+					"title": "Halo 4",
+					"path": "b.wav"
+				}
+			]
+		}, 
+		{
+			"name": "Frag Grenade",
+			"sounds": [
+				{
+					"title": "Halo: CE",
+					"path": "a.wav"
+				}, 
+				{
+					"title": "Halo 4",
+					"path": "b.wav"
+				}
+			]
+		}
+	]
+}
