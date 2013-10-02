@@ -62,7 +62,7 @@ h3.sound-title {
     margin-top: 0px;
 }
 
-h1 a:link{
+h1 a:link, h1 a:visited {
     color: #eee;
 }
 
