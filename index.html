@@ -10,26 +10,20 @@
 <body>
 
     <div class="container">
-        <div class="page-header">
-          <h1>Halo Sound Archive</h1>
+        <header class="page-header">
+          <h1><a href="index.html">Halo Sound Archive</a></h1>
           <h1><small>the evolution of Halo game sounds</small></h1>
-        </div>
+        </header>
 
-
-        <div data-bind="visible: SoundBus.loading" class="sound-container">
-            <h1>Loading...</h1>
+        <div>
+            <p>This is an educational collection of weapon sounds from the Halo
+                games and demonstrates how the game's sound design has
+                evolved over time. For opinions and observations
+                read <a href="notes.html">the observation notes</a>.</p>
         </div>
 
         <div>
-            <p>This site is a collection of the sounds from the weapons of the Halo
-                video games, and demonstrates how the game's sound design has
-                evolved over time. The author and owner of this site did not produce
-                these audio clips and does not claim any ownership over them.</p>
-        </div>
-
-        <div data-bind="visible: !SoundBus.loading()">
-            <div class="sound-container">
-                <h3>Filters</h3>
+            <div>
                 <p>Show: <input type="checkbox" data-bind="checked: showHuman" /> Human
                     <input type="checkbox" data-bind="checked: showCovenant" /> Covenant
                     <input type="checkbox" data-bind="checked: showForerunner" /> Forerunner</p>
@@ -38,24 +32,40 @@
             <ul class="weapon-list" data-bind="foreach: filteredWeapons">
                 <li>
                     <div class="sound-container">
-                        <h3 data-bind="text: name"></h3>
+                        <h3 class="sound-title" data-bind="text: name"></h3>
                         <p data-bind="foreach: sounds">
-                            <a class="btn btn-default sound-button" data-bind="click: play">
+                            <button class="btn btn-default sound-button" data-bind="enable: loaded, click: play">
                                 <span class="glyphicon glyphicon-play"></span>
-                                <span data-bind="text: game"></span></a>
+                                <span data-bind="text: text"></span></button>                                
                         </p>
                         <p>Species: <span data-bind="text: species"></span></p>
                     </div>
                 </li>
             </ul>
         </div>
+        <hr/>
+        <div class="sound-container">
+            <h3>Disclaimer</h3>
+            <p>This site's owner and author claims no ownership or rights to the audio
+                on this site. The Halo video game audio was beautifully produced
+                by <a href="http://bungie.net">Bungie</a> and 
+                <a href="http://343industries.org">343 Industries</a>. This web site
+                is for educational purposes and serves to demonstrate how video game
+                sound design and the Halo game sound design has evolved over time.</p>
+        </div>
 
         <div class="sound-container">
-            <p>This web site is for educational purposes and demonstrates how 
-                sound design in video games and in the Halo series of video games
-                has evolved over time. The site owner and author
-                claims no ownership over any of the video game audio. </p>
-            <p>Background image: <a href="http://www.flickr.com/photos/globalhawk90/8230012831/">http://www.flickr.com/photos/globalhawk90/8230012831/</a></p></div>
+            <h3>Built With...</h3>
+            <p>This site was built with Twitter Bootstrap, knockout.js, and
+                howler.js.</p>
+        </div>
+
+        <div class="sound-container">
+            <h3>Built By...</h3>
+            <p>This site was built by Mike Hodnick.</p>
+            <p><a href="http://twitter.com/kindohm">@kindohm</a></p>
+        </div>
+
     </div>
 
     <script type="text/javascript" src="js/vendor/howler.min.js"></script>

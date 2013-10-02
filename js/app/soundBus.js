@@ -8,35 +8,41 @@
     self.loading = ko.observable(true);
 
     var sounds = {};
-    var halo4Loaded = false;
-    var halo3Loaded = false;
-    var haloReachLoaded = false;
-    var halo2Loaded = false;
-    var haloCELoaded = false;
 
+/*
+    var halo4Loaded = ko.observable(false);
+    var halo3Loaded = ko.observable(false);
+    var haloReachLoaded = ko.observable(false);
+    var halo2Loaded = ko.observable(false);
+    var haloCELoaded = ko.observable(false);
+*/
+    console.log('setting up loadings...');
+    self.loaded = {};
+    self.loaded['Halo 4'] = ko.observable(false);
+    self.loaded['Halo 3'] = ko.observable(false);
+    self.loaded['Halo 2'] = ko.observable(false);
+    self.loaded['Halo CE'] = ko.observable(false);
+    self.loaded['Halo Reach'] = ko.observable(false);
+
+    console.log(self.loaded['Halo 4']());
     sounds['Halo 4'] = getHalo4(function(){
-      halo4Loaded = true;
-      self.loading(!halo4Loaded && !halo3Loaded && !haloReachLoaded && !halo2Loaded && !haloCELoaded);
+      self.loaded['Halo 4'](true);
     });
 
     sounds['Halo 2'] = getHalo2(function(){
-      halo2Loaded = true;
-      self.loading(!halo4Loaded && !halo3Loaded && !haloReachLoaded && !halo2Loaded && !haloCELoaded);
+      self.loaded['Halo 2'](true);
     });
 
     sounds['Halo 3'] = getHalo3(function(){
-      halo3Loaded = true;
-      self.loading(!halo4Loaded && !halo3Loaded && !haloReachLoaded && !halo2Loaded && !haloCELoaded);
+      self.loaded['Halo 3'](true);
     });
 
     sounds['Halo CE'] = getHaloCE(function(){
-      haloCELoaded = true;
-      self.loading(!halo4Loaded && !halo3Loaded && !haloReachLoaded && !halo2Loaded && !haloCELoaded);
+      self.loaded['Halo CE'](true);
     });
 
     sounds['Halo Reach'] = getHaloReach(function(){
-      haloReachLoaded = true;
-      self.loading(!halo4Loaded && !halo3Loaded && !haloReachLoaded && !halo2Loaded && !haloCELoaded);
+      self.loaded['Halo Reach'](true);
     });
 
     self.playSound = function(game, weapon){
@@ -44,6 +50,14 @@
       sounds[game].stop();
       sounds[game].play(name);
     }
+
+    self.loading = ko.computed(function(){
+      return !self.loaded['Halo 4']() ||
+        !self.loaded['Halo 3']() ||
+        !self.loaded['Halo 2']() ||
+        !self.loaded['Halo CE']() ||
+        !self.loaded['Halo Reach']();
+    });
   }
 
   function getHalo4(callback){

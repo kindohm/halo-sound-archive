@@ -5,7 +5,7 @@ body, h1, h2, h3, h4, h5, h6 {
 body{
     background-color: #333;
     color: #eee;
-    background: url('http://farm9.staticflickr.com/8059/8230012831_39b5f0be26_b.jpg') no-repeat right bottom fixed;
+    background: url('../images/bg.jpg') no-repeat right top fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -30,6 +30,9 @@ ul.weapon-list li{
 
 .sound-button{
     margin-bottom: 5px;
+    width: 110px;
+    text-align: left;
+    margin-right: 5px;
 }
 
 .btn-default{
@@ -37,7 +40,16 @@ ul.weapon-list li{
     color: #eee;
 }
 
-.sound-container{
+.btn-default[disabled]{
+    background-color: #222;
+    color: #666;
+}
+
+.sound-loader{
+    width: 14px;
+}
+
+.sound-container {
     border-radius: 5px;
     border: solid 1px #ccc;
     background-color: rgba(51, 51, 51, .9);
@@ -46,10 +58,15 @@ ul.weapon-list li{
     margin-bottom: 30px
 }
 
-.sound-container h3{
+h3.sound-title {
     margin-top: 0px;
 }
 
-p{
-    margin-bottom: 20px;
+h1 a:link{
+    color: #eee;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
 }
